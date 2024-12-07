@@ -1,11 +1,11 @@
 <h1>Mapping Population Dynamics and Geographic Insights Using D3</h1>
 
-
+<br>
 **1. Abstract**
 
 This project is a web application that visualizes various datasets through fix charts, including global population density, population trends by country, birth rate trends by country, a Voronoi diagram of U.S. airports, Walmart’s growth over time, and health-adjusted life expectancy (HALE) by country. The project is built using HTML, CSS, JavaScript, D3.js, and TopoJSON, and d3-geo-voronoi, the application combines geographic and statistical visualization techniques to create an interactive, user-friendly platform for exploring data trends.
 
-
+<br>
 
 **2. Technology Stack**
 
@@ -23,7 +23,7 @@ This project is a web application that visualizes various datasets through fix c
 
 •	d3-geo-voronoi: Utilized to draw Voronoi diagrams.
 
-
+<br>
 
 **3. How to Use**
 
