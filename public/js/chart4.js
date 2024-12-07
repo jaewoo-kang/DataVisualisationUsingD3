@@ -2,7 +2,7 @@
 
 const margin4 = { top: 50, right: 70, bottom: 30, left: 70 },
     width4 = 1170 - margin4.left - margin4.right,
-    height4 = 600 - margin4.top - margin4.bottom;
+    height4 = 700 - margin4.top - margin4.bottom;
 
 const svg4 = d3.select("#chart4")
     .attr("width", width4 + margin4.left + margin4.right)
@@ -40,7 +40,7 @@ Promise.all([
     }))  // Load and convert airports data
 ]).then(([us, data]) => {
 
-    const projection4 = d3.geoAlbers().scale(1300).translate([width4 / 2 - 27, height4 / 2 + 44]);
+    const projection4 = d3.geoAlbers().scale(1300).translate([width4 / 2 - 27, height4 / 2 - 5]);
 
     const geoPath = d3.geoPath(projection4);
 
