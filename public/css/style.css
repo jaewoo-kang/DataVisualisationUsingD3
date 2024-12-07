@@ -1,0 +1,177 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  padding: 30px;
+  background: #f7f7f7;
+}
+
+.main-title {
+  font-size: 20pt; 
+  margin-bottom: 30px; 
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 0px;
+}
+
+#charts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 60vh; 
+}
+
+#chart2, #chart3, #chart4, #chart5, #chart6 {
+  display: none;
+}
+
+#charts svg {
+  display: block; 
+  width: 100%; 
+  margin: 0 auto; 
+}
+
+
+.page-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px;
+}
+
+.page-navigation button {
+  padding: 8px;
+  margin: 0 8px;
+  font-size: 6pt;
+}
+
+/* 맵 설정 */
+#maps svg {
+  width: 80%; /* 맵의 크기 조정 */
+  margin: 0 auto;
+}
+
+/* 툴팁 스타일 */
+#tooltip1, #tooltip2, #tooltip3 {
+  position: absolute;
+  display: none;
+  background: #fff;
+  box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px;
+  min-width: 160px;
+  color: #333;
+  border-radius: 8px;
+}
+
+.tooltip-title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 할 일 목록 스타일 */
+#todo-list {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+#todo-list h3 {
+  font-size: 10pt;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#todo-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#todo-list ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 9pt;
+  transition: background-color 0.3s ease;
+}
+
+#todo-list ul li:hover {
+  background-color: #e0e0e0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.source {
+  margin-top: 30px;
+  font-size: 10px;
+  color: #888;
+}
+
+.source a {
+  color: #888;
+}
+
+.bar {
+  shape-rendering: crispEdges;
+}
+
+.bar:hover {
+  stroke: #777;
+}
+
+.bar.active {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+/* 축 스타일 */
+.axis line {
+  fill: none;
+  stroke: #ddd;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 13px;
+  fill: #6b6b6b;
+}
+
+.axis-title {
+  font-size: 13px;
+  fill: #888;
+}
+
+/* 첫 번째 축의 스타일 */
+.y-axis .tick:first-child line {
+  stroke: #b1b1b1;
+}
+
+.y-axis .tick:first-child text {
+  display: none;
+}
+
+.x-axis .tick:first-child line {
+  display: none;
+}
+
+.axis path {
+  display: none;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IT 494 Master Project: Jae Woo Kang</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- chart4 -->
+    <!-- put reference in the paper -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo-voronoi@2"></script> <!-- d3-geo-voronoi -->
+</head>
+
+<body>
+    <h2 class="main-title">Geo Data Visualization Using D3.js: Jae Woo Kang</h2>
+
+
+    <div id="container">
+
+        <div id="charts">
+            <!-- chart containers -->
+            <svg id="chart1" width="1000" height="600"></svg>
+            <div id="tooltip1"></div>
+
+            <svg id="chart2" width="1000" height="600"></svg>
+            <div id="tooltip2"></div>
+
+            <svg id="chart3" width="1000" height="600"></svg>
+            <div id="tooltip3"></div>
+
+            <svg id="chart4" width="1200" height="800"></svg>
+            <div id="tooltip4"></div>
+
+            <svg id="chart5" width="1000" height="600"></svg>
+
+            <svg id="chart6" width="1000" height="600"></svg>
+        </div>
+
+        <!-- page navigation -->
+        <div class="page-navigation">
+            <button id="prevButton">&lt;</button>
+            <button id="page1Button">1</button>
+            <button id="page2Button">2</button>
+            <button id="page3Button">3</button>
+            <button id="page4Button">4</button>
+            <button id="page5Button">5</button>
+            <button id="page6Button">6</button>
+            <button id="nextButton">&gt;</button>
+        </div>
+
+        <!-- <div id="todo-list"></div> -->
+    </div>
+
+    <script src="js/chart1.js"></script>
+    <script src="js/chart2.js"></script>
+    <script src="js/chart3.js"></script>
+    <script src="js/chart4.js"></script>
+    <script src="js/chart5.js"></script>
+    <script src="js/chart6.js"></script>
+
+    <script>
+        // Current page
+        let currentPage = 1;
+        document.getElementById('chart6').style.display = 'none';
+
+        // Controller of the page
+        function showPage(pageNumber) {
+            currentPage = pageNumber;
+            if (pageNumber === 1) {
+                document.getElementById('chart1').style.display = 'block';
+                document.getElementById('tooltip1').style.display = 'none';
+                document.getElementById('chart2').style.display = 'none';
+                document.getElementById('tooltip2').style.display = 'none';
+                document.getElementById('chart3').style.display = 'none';
+                document.getElementById('tooltip3').style.display = 'none';
+                document.getElementById('chart4').style.display = 'none';
+                document.getElementById('tooltip4').style.display = 'none';
+                document.getElementById('chart5').style.display = 'none';
+                document.getElementById('controls').style.display = 'none';
+                document.getElementById('chart6').style.display = 'none';
+
+            } else if (pageNumber === 2) {
+                document.getElementById('chart1').style.display = 'none';
+                document.getElementById('tooltip1').style.display = 'none';
+                document.getElementById('chart2').style.display = 'block';
+                document.getElementById('tooltip2').style.display = 'none';
+                document.getElementById('chart3').style.display = 'none';
+                document.getElementById('tooltip3').style.display = 'none';
+                document.getElementById('chart4').style.display = 'none';
+                document.getElementById('tooltip4').style.display = 'none';
+                document.getElementById('chart5').style.display = 'none';
+                document.getElementById('controls').style.display = 'none';
+                document.getElementById('chart6').style.display = 'none';
+
+            } else if (pageNumber === 3) {
+                document.getElementById('chart1').style.display = 'none';
+                document.getElementById('tooltip1').style.display = 'none';
+                document.getElementById('chart2').style.display = 'none';
+                document.getElementById('tooltip2').style.display = 'none';
+                document.getElementById('chart3').style.display = 'block';
+                document.getElementById('tooltip3').style.display = 'none';
+                document.getElementById('chart4').style.display = 'none';
+                document.getElementById('tooltip4').style.display = 'none';
+                document.getElementById('chart5').style.display = 'none';
+                document.getElementById('controls').style.display = 'none';
+                document.getElementById('chart6').style.display = 'none';
+
+            } else if (pageNumber === 4) {
+                document.getElementById('chart1').style.display = 'none';
+                document.getElementById('tooltip1').style.display = 'none';
+                document.getElementById('chart2').style.display = 'none';
+                document.getElementById('tooltip2').style.display = 'none';
+                document.getElementById('chart3').style.display = 'none';
+                document.getElementById('tooltip3').style.display = 'none';
+                document.getElementById('chart4').style.display = 'block';
+                document.getElementById('tooltip4').style.display = 'none';
+                document.getElementById('chart5').style.display = 'none';
+                document.getElementById('controls').style.display = 'none';
+                document.getElementById('chart6').style.display = 'none';
+
+            } else if (pageNumber === 5) {
+                document.getElementById('chart1').style.display = 'none';
+                document.getElementById('tooltip1').style.display = 'none';
+                document.getElementById('chart2').style.display = 'none';
+                document.getElementById('tooltip2').style.display = 'none';
+                document.getElementById('chart3').style.display = 'none';
+                document.getElementById('tooltip3').style.display = 'none';
+                document.getElementById('chart4').style.display = 'none';
+                document.getElementById('tooltip4').style.display = 'none';
+                document.getElementById('chart5').style.display = 'block';
+                document.getElementById('controls').style.display = 'block';
+                document.getElementById('chart6').style.display = 'none';
+
+            } else if (pageNumber === 6) {
+                document.getElementById('chart1').style.display = 'none';
+                document.getElementById('tooltip1').style.display = 'none';
+                document.getElementById('chart2').style.display = 'none';
+                document.getElementById('tooltip2').style.display = 'none';
+                document.getElementById('chart3').style.display = 'none';
+                document.getElementById('tooltip3').style.display = 'none';
+                document.getElementById('chart4').style.display = 'none';
+                document.getElementById('tooltip4').style.display = 'none';
+                document.getElementById('chart5').style.display = 'none';
+                document.getElementById('controls').style.display = 'none';
+                document.getElementById('chart6').style.display = 'block';
+
+            }
+        }
+
+        // Page button Event Listener
+        document.getElementById('page1Button').addEventListener('click', function () {
+            showPage(1);
+        });
+
+        document.getElementById('page2Button').addEventListener('click', function () {
+            showPage(2);
+        });
+
+        document.getElementById('page3Button').addEventListener('click', function () {
+            showPage(3);
+        });
+
+        document.getElementById('page4Button').addEventListener('click', function () {
+            showPage(4);
+        });
+
+        document.getElementById('page5Button').addEventListener('click', function () {
+            showPage(5);
+        });
+
+        document.getElementById('page6Button').addEventListener('click', function () {
+            showPage(6);
+        });
+
+        // previous button
+        document.getElementById('prevButton').addEventListener('click', function () {
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+            }
+        });
+
+        // next button
+        document.getElementById('nextButton').addEventListener('click', function () {
+            if (currentPage < 6) {
+                showPage(currentPage + 1);
+            }
+        });
+
+        // Greeting page would be the first page
+        showPage(1);
+
+        // Ideation list
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const todoList = document.getElementById('todo-list');
+        //     const tasks = [
+        //         'Represent the change in charts numerically.',
+        //         'Improve the design to be more like well-made sites.(using duration effect when changing the charts)',
+        //         'Research if there are any available D3 frameworks to use. (or other visualation method using map)',
+        //         'Determine if I can mass-produce an easy-to-use data analysis site tailored to specific themes for clients.',
+        //         'Enable toggling data display on/off through legend selection.',
+        //         'Link anaconda jupyter notebook.'
+        //     ];
+
+        //     const listHeader = document.createElement('h3');
+        //     listHeader.textContent = 'Plan / Ideation / To-Do List';
+        //     todoList.appendChild(listHeader);
+
+        //     const ul = document.createElement('ul');
+        //     tasks.forEach((task, index) => {
+        //         const li = document.createElement('li');
+        //         li.textContent = `${index + 1}. ${task}`;
+        //         ul.appendChild(li);
+        //     });
+        //     todoList.appendChild(ul);
+        // });
+    </script>
+
+</body>
+
+</html>
