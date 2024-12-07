@@ -29,7 +29,18 @@ This project is a web application that visualizes various datasets through fix c
 npm install
 ```
 
-2. Start the application using Nodemon:
+2. Install nodemon using npm
+- global install:
+```
+npm install -g nodemon
+```
+
+- local install:
+```
+npm install --save-dev nodemon
+```
+
+3. Start the application using Nodemon:
 ```
 nodemon index.js
 ```
