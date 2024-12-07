@@ -16,7 +16,22 @@ This project is a web application that visualizes various datasets through fix c
 
 •	D3.js: A primary library used for creating various charts and geographic visualizations.
 
+•	Nodemon: A development tool that automatically restarts the server when file changes are detected. This streamlines the development process by reducing the need for manual restarts.
+
 •	TopoJSON: Used for processing geographical data to create map visualizations.
 
 •	d3-geo-voronoi: Utilized to draw Voronoi diagrams.
 
+**3. How to Use**
+
+1. Install dependencies by running:
+```
+npm install
+```
+
+2. Start the application using Nodemon:
+```
+nodemon index.js
+```
+
+Nodemon will monitor your project files and automatically restart the server whenever you make changes, enabling a smoother development experience.
