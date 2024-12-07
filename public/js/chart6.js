@@ -1,4 +1,5 @@
-//Reference: https://observablehq.com/@d3/world-choropleth/2
+// World choropleth: Health-adjusted life expectancy, 2016. Data: WHO
+// Reference: https://observablehq.com/@d3/world-choropleth/2
 
 async function createChart() {
     const width = 1000;

@@ -1,4 +1,5 @@
-//Reference: https://observablehq.com/@d3/us-airports-voronoi?intent=fork
+// U.S. airports Voronoi
+// Reference: https://observablehq.com/@d3/us-airports-voronoi?intent=fork
 
 const margin4 = { top: 50, right: 70, bottom: 30, left: 70 },
     width4 = 1170 - margin4.left - margin4.right,

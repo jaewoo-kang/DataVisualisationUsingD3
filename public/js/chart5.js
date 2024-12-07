@@ -1,4 +1,5 @@
-//Reference: https://observablehq.com/@d3/walmarts-growth?intent=fork
+// Walmart's grow by timeline
+// Reference: https://observablehq.com/@d3/walmarts-growth?intent=fork
 
 async function createChart() {
     const svg = d3.select("#chart5")
