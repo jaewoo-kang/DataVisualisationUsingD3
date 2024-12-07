@@ -1,6 +1,5 @@
-**Master Project: Data Visualization Using D3.js**
+<h1>Mapping Population Dynamics and Geographic Insights Using D3</h1>
 
-Mapping Population Dynamics and Geographic Insights Using D3
 
 **1. Abstract**
 
